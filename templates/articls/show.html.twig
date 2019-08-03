@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% block title %}{{  title }} {% endblock %}
+<p>KPro staff augmentation services
+    provide best in class skilled personnel to work along with you for very short, short and long term projects.</p>
+
+<h2>Comments ({{ comments | length }})</h2>
+<ul>
+ {% for comment in comments %}
+
+     <li>{{  comment }}</li>
+
+
+{% endfor %}
+</ul>
+{% endblock %}
