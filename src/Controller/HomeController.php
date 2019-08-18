@@ -11,18 +11,24 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 /**
- * Description of ArticleController
+ * Description of HomeController
  *
  * @author Administrator
  */
-class ArticleController extends AbstractController {
+class HomeController extends AbstractController {
+    
     /**
-     * @Route("/" ,name="app_homepage")
+     * @Route("/" ,name="app_login")
+     */
+    public function loginpage(){
+        return $this->render('login/login.html.twig');
+    }
+    
+    /**
+     * @Route("/home" ,name="app_homepage")
      */
     public function homepage(){
-        //return new Response('Woo this is my first page');
-        //return new Response('This is my first page');
-        return $this->render('articls/homepage.html.twig');
+        return $this->render('home/homepage.html.twig');
     }
 
     /**
